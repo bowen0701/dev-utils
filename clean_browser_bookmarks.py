@@ -1,6 +1,6 @@
-import re
-import os
 import argparse
+import os
+import re
 import sys
 
 
@@ -36,9 +36,7 @@ def clean_browser_bookmarks(input_filename, output_filename):
         with open(output_filename, "w", encoding="utf-8") as f:
             f.write(cleaned_content)
 
-        print(
-            f"Success! Cleaned bookmarks saved to: {os.path.abspath(output_filename)}"
-        )
+        print(f"Success! Cleaned bookmarks saved to: {os.path.abspath(output_filename)}")
 
     except Exception as e:
         print(f"An error occurred: {e}")
@@ -46,13 +44,9 @@ def clean_browser_bookmarks(input_filename, output_filename):
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="CLI tool to remove leading asterisks from browser bookmark HTML files."
-    )
+    parser = argparse.ArgumentParser(description="CLI tool to remove leading asterisks from browser bookmark HTML files.")
 
-    parser.add_argument(
-        "input", help="Path to the original exported bookmarks HTML file."
-    )
+    parser.add_argument("input", help="Path to the original exported bookmarks HTML file.")
 
     parser.add_argument(
         "-o",

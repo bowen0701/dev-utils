@@ -45,7 +45,7 @@ jobs:
         run: |
           mypy .
 
-      # -------- TEST (Uncomment after adding tests) --------
-      # - name: Run tests (pytest)
-      #   run: |
-      #     pytest --cov=. --cov-report=xml
+      # -------- TEST --------
+      - name: Run tests (pytest)
+        run: |
+          pytest --cov=. --cov-report=xml
